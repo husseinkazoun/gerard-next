@@ -1,4 +1,4 @@
-export default function Home() {
+""export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black font-sans">
       <header className="py-6 px-8 flex justify-between items-center border-b border-gray-300">
