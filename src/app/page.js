@@ -1,103 +1,55 @@
-import Image from "next/image";
-
-export default function Home() {
+""export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-white text-black font-sans">
+      <header className="py-6 px-8 flex justify-between items-center border-b border-gray-300">
+        <h1 className="text-3xl font-bold">Gérard El Bitar</h1>
+        <a href="/CV_gerard_el_bitar.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Download CV</a>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="w-full h-screen overflow-hidden relative">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/thumbs/frame000.jpg"
+        >
+          <source src="/hero_reel.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h2 className="text-white text-5xl font-semibold drop-shadow-xl">Translating lived experience into compelling film and sound</h2>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <section className="py-16 px-8 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-4">About</h2>
+        <p className="mb-6">
+          I am Gérard, an award-winning director of the acclaimed documentary <em>The Stranger Within Me</em>, and a musician based in Beirut, Lebanon. I create work that resonates. As a composer, producer, and musician active in Beirut’s electronic scene, my work commits to leveraging visuals and sound—art—in the service of social expression.
+        </p>
+
+        <h2 className="text-2xl font-semibold mb-4">Selected Works</h2>
+
+        <figure className="mb-12">
+          <video
+            className="w-full border border-gray-300"
+            preload="none"
+            controls
+            muted
+            playsInline
+            poster="/thumbs/frame000.jpg"
+          >
+            <source src="/hero_reel.mp4" type="video/mp4" />
+          </video>
+          <figcaption className="mt-2 text-sm text-gray-600">Hero Reel — A journey through intimate filmmaking and activism.</figcaption>
+        </figure>
+
+        {/* Add more <figure>...</figure> blocks for additional videos */}
+      </section>
+
+      <footer className="bg-gray-100 py-6 px-8 text-center text-sm text-gray-600">
+        &copy; {new Date().getFullYear()} Gérard El Bitar — All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
